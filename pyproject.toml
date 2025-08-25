@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "symentic-mcp"
+version = "0.1.0"
+description = "MCP server for Symentic - Personal memory context layer for enterprises"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "mcp>=1.0.0",
+    "boto3>=1.35.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "typing-extensions>=4.0.0",
+]
+
+[project.scripts]
+symentic-mcp = "symentic_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["symentic_mcp*"]

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "symentic": {
+      "command": "python",
+      "args": ["-m", "symentic_mcp.server"],
+      "cwd": "C:\\Users\\leoga\\coding\\symentic-mcp",
+      "env": {
+        "AWS_PROFILE": "leogao",
+        "AWS_REGION": "us-east-1",
+        "DYNAMODB_TABLE": "SymenticProfileEngrams-prod"
+      }
+    }
+  }
+}
